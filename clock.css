@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-color: #444;
+}
+
+.clock {
+  position: relative;
+  box-sizing: border-box;
+  width: 500px;
+  height: 500px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  border: 2px solid rgb(82, 61, 8);
+  box-shadow: 5px 5px 20px black,
+    inset 0 0 30px rgb(95, 95, 4);
+}
+
+img {
+  width: 180px;
+  position: absolute;
+  top: 4.5rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.madeby {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: 'Satisfy', cursive;
+  color: goldenrod;
+}
+
+.madeby p {
+  text-align: center;
+  font-size: 12px;
+}
+
+.madeby p span {
+  font-size: 15px;
+
+}
+
+/*                              numbers     */
+.numbers div {
+  position: absolute;
+  font-weight: bold;
+  color: rgb(161, 144, 102);
+  font-size: 45px;
+  text-shadow: 2px 2px 4px rgb(167, 167, 92);
+}
+
+.twelve {
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.three {
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.six {
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.nine {
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*                              arrows    */
+
+.arrows {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.arrows::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(6, 13, 93);
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  z-index: 10;
+  border: 1px solid red;
+}
+
+.arrows div {
+  position: absolute;
+  background-color: red;
+  height: 210px;
+  width: 5px;
+  transform-origin: bottom center;
+  bottom: 50%;
+  box-shadow: 2px 2px 4px #777;
+  border-radius: 50% 50% 0 0;
+}
+
+.arrows .minute {
+  height: 170px;
+  width: 7px;
+  background-color: rgb(78, 125, 3);
+
+}
+
+.arrows .hour {
+  height: 120px;
+  width: 12px;
+  background-color: rgb(6, 60, 121);
+
+}
+
+
+@media (max-width:600px) {
+  .clock {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  .arrows div {
+    height: 180px;
+  }
+
+  .arrows .minute {
+    height: 150px;
+  }
+
+  .arrows .hour {
+    height: 110px;
+  }
+}
+
+@media (max-width:500px) {
+
+  .arrows div {
+    height: 165px;
+  }
+
+  .arrows .minute {
+    height: 135px;
+  }
+
+  .arrows .hour {
+    height: 100px;
+  }
+}
+
+@media (max-width:450px) {
+
+  .arrows div {
+    height: 140px;
+  }
+
+  .arrows .minute {
+    height: 115px;
+  }
+
+  .arrows .hour {
+    height: 85px;
+  }
+}
+
+@media (max-width:400px) {
+
+  .arrows div {
+    height: 130px;
+  }
+
+  .arrows .minute {
+    height: 105px;
+  }
+
+  .arrows .hour {
+    height: 75px;
+  }
+}
